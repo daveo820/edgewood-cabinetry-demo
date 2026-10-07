@@ -1,0 +1,33 @@
+/* Edgewood Cabinetry concept: tokens. Sage sampled from the Edgewood logo; wood and kraft from Pete's shop photos. */
+:root{
+  --graphite:#24282b;   /* text, dark bands */
+  --sage:#86b5b0;       /* Edgewood logo sage, dark backgrounds only */
+  --sage-dk:#355f5a;    /* logo sage deepened for AA on light */
+  --kraft:#e8dcc3;      /* shop paper panels */
+  --chalk:#f8f4ec;      /* page */
+  --maple:#b47a43;      /* maple and cherry stain */
+  --pencil:#b8411a;     /* carpenter's pencil: signal + signature marks, 4.9:1 on chalk */
+  --dust:#625e57;       /* muted text, 6:1 on chalk */
+  --line:#d9ccb2;
+  --f-display:"Zilla Slab",Rockwell,Georgia,serif;
+  --f-body:"Atkinson Hyperlegible",system-ui,sans-serif;
+  --step-0:1.125rem;    /* 18px body */
+  --step-2:1.55rem;--step-3:2.1rem;--step-4:clamp(2.2rem,4.6vw,3.3rem);--step-5:clamp(2.6rem,6vw,4.6rem);
+  --snap:cubic-bezier(.16,1,.3,1);
+  --wrap:1220px;--gut:clamp(20px,4vw,44px);
+}
+*,*::before,*::after{box-sizing:border-box}
+html,body{overflow-x:clip}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--chalk);color:var(--graphite);font:400 var(--step-0)/1.6 var(--f-body);-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block;height:auto}
+h1,h2,h3{font-family:var(--f-display);font-weight:600;line-height:1.05;letter-spacing:-.005em;margin:0}
+p{margin:0 0 1em;max-width:66ch}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--pencil);outline-offset:3px}
+.wrap{max-width:var(--wrap);margin:0 auto;padding:0 var(--gut)}
+.kicker{display:inline-flex;align-items:center;gap:10px;font:700 .78rem/1.3 var(--f-body);letter-spacing:.22em;text-transform:uppercase;color:var(--sage-dk);margin:0 0 16px}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.skip{position:absolute;left:-999px;top:8px;background:var(--graphite);color:#fff;padding:10px 14px;z-index:99}
+.skip:focus{left:8px}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}

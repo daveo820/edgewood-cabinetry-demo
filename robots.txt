@@ -1,0 +1,3 @@
+User-agent: *
+Disallow: /
+# Concept demo by LuminArch. Not for indexing.

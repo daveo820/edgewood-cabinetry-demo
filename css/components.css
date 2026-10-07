@@ -1,0 +1,58 @@
+.demo-bar{background:var(--pencil);color:#fff;font:700 .8rem/1.4 var(--f-body);text-align:center;padding:8px 16px}
+.demo-bar a{color:#fff}
+.util{background:var(--graphite);color:#e9e4da;font-size:.88rem}
+.util .wrap{display:flex;justify-content:space-between;gap:16px;padding-top:8px;padding-bottom:8px;flex-wrap:wrap}
+.util a{color:#fff;text-decoration:none;font-weight:700}
+.util a:hover{text-decoration:underline}
+.top{position:sticky;top:0;z-index:40;background:var(--chalk);border-bottom:2px solid var(--graphite)}
+.nav{display:flex;align-items:center;gap:26px;height:74px}
+.mark{display:flex;align-items:center;gap:12px;text-decoration:none}
+.mark .ec{display:grid;place-items:center;width:42px;height:42px;background:var(--graphite);color:var(--sage);font:700 1.1rem/1 var(--f-display);letter-spacing:-.04em}
+.mark b{display:block;font:700 1.35rem/1 var(--f-display);letter-spacing:.06em;text-transform:uppercase}
+.mark small{display:block;font:700 .66rem/1 var(--f-body);letter-spacing:.28em;text-transform:uppercase;color:var(--sage-dk);margin-top:5px}
+#menu{display:flex;gap:22px;list-style:none;margin:0 0 0 auto;padding:0}
+#menu a{text-decoration:none;font-weight:700;font-size:.98rem;position:relative;padding:6px 0}
+#menu a[aria-current]::after,#menu a:hover::after{content:"";position:absolute;left:0;right:0;bottom:-2px;height:3px;background:var(--pencil);border-radius:2px}
+.menu-btn{display:none;margin-left:auto;background:var(--graphite);color:#fff;border:0;font:700 .9rem var(--f-body);padding:10px 16px;cursor:pointer}
+.btn{display:inline-flex;align-items:center;gap:10px;background:var(--pencil);color:#fff;text-decoration:none;font:700 1rem/1 var(--f-body);padding:16px 22px;border:2px solid var(--pencil);transition:transform .35s var(--snap),background .2s,box-shadow .35s var(--snap);cursor:pointer;box-shadow:4px 4px 0 var(--graphite)}
+.btn:hover{transform:translate(-2px,-2px);box-shadow:6px 6px 0 var(--graphite)}
+.btn:active{transform:translate(2px,2px);box-shadow:1px 1px 0 var(--graphite)}
+.btn--plain{background:transparent;color:var(--graphite);border-color:var(--graphite);box-shadow:none}
+.btn--plain:hover{box-shadow:4px 4px 0 var(--graphite)}
+.top .btn{padding:12px 16px;box-shadow:3px 3px 0 var(--graphite)}
+/* Signature: the carpenter's crow's foot, the V a woodworker pencils on a board to mark the exact cut. */
+.mark-v{width:26px;height:16px;flex:none;color:var(--pencil)}
+.mark-v path{stroke:currentColor;stroke-width:2.2;fill:none;stroke-linecap:round;stroke-dasharray:40;stroke-dashoffset:0;transition:stroke-dashoffset .7s var(--snap) .15s}
+.js-ready .rv:not(.in) .mark-v path,.js-ready .mark-v.rv:not(.in) path{stroke-dashoffset:40}
+.u-pencil{background:linear-gradient(transparent 0 0);position:relative;white-space:nowrap}
+.u-pencil svg{position:absolute;left:-2%;bottom:-.22em;width:104%;height:.4em;color:var(--pencil);overflow:visible}
+.u-pencil path{stroke:currentColor;stroke-width:3;fill:none;stroke-linecap:round;stroke-dasharray:300;stroke-dashoffset:0;transition:stroke-dashoffset 1s var(--snap) .35s}
+.js-ready .rv:not(.in) .u-pencil path{stroke-dashoffset:300}
+/* Motion: confident punctuation. Quick, decisive snaps; numbers count; nothing floats. */
+.rv{transition:opacity .5s var(--snap),transform .5s var(--snap)}
+.js-ready .rv:not(.in){opacity:0;transform:translateY(16px) scale(.985)}
+body>footer{background:var(--graphite);color:#d6d1c6;padding:88px 0 32px}
+body>footer a{color:#fff}
+.foot-top{display:grid;grid-template-columns:1.3fr 1fr;gap:56px;align-items:end;padding-bottom:56px;border-bottom:1px solid #3b4044}
+.foot-call{font:600 clamp(2.2rem,5vw,4rem)/1.05 var(--f-display);color:#fff;margin:0}
+.foot-call a{text-decoration:none;color:var(--sage);white-space:nowrap}
+.foot-call a:hover{text-decoration:underline}
+.foot-top p.small{color:#b9b3a7;margin:14px 0 0}
+.foot-grid{display:grid;grid-template-columns:1fr 1fr 1.4fr;gap:40px;padding-top:40px}
+.foot-grid h2{font:700 .75rem/1 var(--f-body);letter-spacing:.22em;text-transform:uppercase;color:var(--sage);margin:0 0 14px}
+.foot-grid ul{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+.foot-grid a{text-decoration:none}.foot-grid a:hover{text-decoration:underline}
+.foot-towns{font-size:.92rem;line-height:1.75;color:#b9b3a7}
+address{font-style:normal;line-height:1.7}
+.foot-row{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-top:48px;font-size:.85rem;color:#a29c90}
+.note{font-size:.95rem;color:var(--dust);border-left:3px solid var(--pencil);padding:4px 0 4px 14px}
+.note strong{color:var(--graphite)}
+@media (max-width:960px){
+  .menu-btn{display:block}
+  #menu{position:fixed;left:0;right:0;top:0;flex-direction:column;gap:0;background:var(--chalk);padding:110px var(--gut) 28px;transform:translateY(-100%);visibility:hidden;transition:transform .4s var(--snap),visibility .4s;border-bottom:2px solid var(--graphite);z-index:-1}
+  #menu.open{transform:none;visibility:visible}
+  #menu a{display:block;font:600 1.7rem/1.2 var(--f-display);padding:12px 0;border-bottom:1px solid var(--line)}
+  #menu a::after{display:none}
+  .top .btn{display:none}
+  .foot-top,.foot-grid{grid-template-columns:1fr}
+}
