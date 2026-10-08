@@ -1,6 +1,6 @@
 # Static page builder for the Edgewood Cabinetry concept. Run: python3 build.py
 import json, os
-BASE = 'https://daveo820.github.io/edgewood-cabinetry-demo/'  # temporary GitHub Pages link; swap for Vercel later
+BASE = 'https://edgewood-cabinetry-demo.vercel.app/'  # Vercel production URL
 TEL, TEL_H = '+19193397300', '(919) 339&#8209;7300'
 BIRDEYE = 'https://reviews.birdeye.com/edgewood-custom-cabinetry-148996040070171'
 TOWNS = ['Raleigh','Durham','Chapel Hill','Sanford','Apex','Cary','Morrisville','Wake Forest','Pittsboro','Carrboro','Rolesville','Knightdale','Zebulon','Wendell','Wilson','Garner','Clayton','Holly Springs','Fuquay-Varina','Smithfield','Benson','Lillington','Fayetteville','Goldsboro','Angier']
