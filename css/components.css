@@ -60,3 +60,8 @@ address{font-style:normal;line-height:1.7}
 /* device QA: 44px tap targets on phones */
 .menu-btn,.mark{min-height:44px}
 @media (max-width:1024px),(pointer:coarse){.util a{display:inline-flex;align-items:center;min-height:44px;margin:-8px 0}}
+/* device QA: the phone menu drops down from the header bar, so it can't slide behind the logo when the page is at the top (the utility bar pushes the header down) */
+@media (max-width:960px){
+  #menu{position:absolute;top:100%;padding:4px var(--gut) 24px;transform:translateY(-6px);opacity:0;transition:opacity .25s,transform .25s var(--snap),visibility .25s;z-index:5;max-height:calc(100vh - 90px);overflow-y:auto}
+  #menu.open{opacity:1;transform:none}
+}
